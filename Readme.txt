@@ -1,3 +1,8 @@
 In the home folder, the root file for the vim setup should be called "vimfiles".
+
 In windows 7, you should create a symbolic link to _vimrc and _gvimrc, using the mklink utility (admin rights required)
+
+Command-T
+---------
+Namespace alike conflicts with ruby.vim in vim-ruby/ftplugin: https://wincent.com/issues/1752
 
