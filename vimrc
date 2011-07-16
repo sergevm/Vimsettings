@@ -9,11 +9,23 @@ let mapleader = ","
 map <F2> :NERDTreeToggle<CR>
 map <leader>t :CommandT<CR>
 map <leader>n :NERDTree<CR>
+"Buffer navigation
 map <C-TAB> :bnext!<CR>
 map <C-S-TAB> :bprev!<CR>
+nnoremap <leader>b :ls<CR>:buffer<space>
+
+"Window navigation
+nnoremap <Tab> 
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <C-j> <C-w>j
+map <C-k> <C-w>k
 
 set lines=40
-set columns=120
+set columns=160
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set number
 set ruler
 set showcmd
@@ -165,6 +177,6 @@ filetype on
 filetype indent on
 filetype plugin on
 
-colorscheme vividchalk
+colorscheme obsidian 
 
-cd /
+cd /Users/serge/Development

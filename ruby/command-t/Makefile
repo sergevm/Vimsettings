@@ -4,13 +4,11 @@ SHELL = /bin/sh
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /C/Tools/Ruby187/lib/ruby/1.8/i386-mingw32
+topdir = /Users/serge/.rvm/rubies/ruby-1.8.7-p299/lib/ruby/1.8/i686-darwin10.4.0
 hdrdir = $(topdir)
 VPATH = $(srcdir):$(topdir):$(hdrdir)
-
-DESTDIR = C:
 exec_prefix = $(prefix)
-prefix = $(DESTDIR)/Tools/Ruby187
+prefix = $(DESTDIR)/Users/serge/.rvm/rubies/ruby-1.8.7-p299
 sharedstatedir = $(prefix)/com
 mandir = $(datarootdir)/man
 psdir = $(docdir)
@@ -40,34 +38,34 @@ localstatedir = $(prefix)/var
 sitelibdir = $(sitedir)/$(ruby_version)
 
 CC = gcc
-LIBRUBY = lib$(LIBRUBY_SO).a
+LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static
 
 RUBY_EXTCONF_H = 
-CFLAGS   =  -g -O2 -DFD_SETSIZE=256  $(cflags) 
+CFLAGS   =  -fno-common -g -O2  -fno-common -pipe -fno-common $(cflags) 
 INCFLAGS = -I. -I$(topdir) -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_RUBY_H  $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_RUBY_H  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags)
 CXXFLAGS = $(CFLAGS) 
 ldflags  = -L. 
-dldflags =  -Wl,--enable-auto-image-base,--enable-auto-import,--export-all
+dldflags = 
 archflag = 
 DLDFLAGS = $(ldflags) $(dldflags) $(archflag)
-LDSHARED = gcc -shared -s
+LDSHARED = cc -dynamic -bundle -undefined suppress -flat_namespace
 AR = ar
-EXEEXT = .exe
+EXEEXT = 
 
 RUBY_INSTALL_NAME = ruby
-RUBY_SO_NAME = msvcrt-ruby18
-arch = i386-mingw32
-sitearch = i386-msvcrt
+RUBY_SO_NAME = ruby
+arch = i686-darwin10.4.0
+sitearch = i686-darwin10.4.0
 ruby_version = 1.8
-ruby = C:/Tools/Ruby187/bin/ruby
+ruby = /Users/serge/.rvm/rubies/ruby-1.8.7-p299/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
-MAKEDIRS = install -d
+MAKEDIRS = mkdir -p
 INSTALL = /usr/bin/install -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
@@ -88,11 +86,11 @@ extout =
 extout_prefix = 
 target_prefix = 
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED)  -lshell32 -lws2_32  
+LIBS = $(LIBRUBYARG_SHARED)  -ldl -lobjc  
 SRCS = ext.c match.c matcher.c
 OBJS = ext.o match.o matcher.o
 TARGET = ext
-DLLIB = $(TARGET).so
+DLLIB = $(TARGET).bundle
 EXTSTATIC = 
 STATIC_LIB = 
 
@@ -102,7 +100,7 @@ RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
 RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
-CLEANLIBS     = $(TARGET).so $(TARGET).il? $(TARGET).tds $(TARGET).map
+CLEANLIBS     = $(TARGET).bundle $(TARGET).il? $(TARGET).tds $(TARGET).map
 CLEANOBJS     = *.o *.a *.s[ol] *.pdb *.exp *.bak
 
 all:		$(DLLIB)
@@ -133,7 +131,7 @@ site-install: site-install-so site-install-rb
 site-install-so: install-so
 site-install-rb: install-rb
 
-.SUFFIXES: .c .m .cc .cxx .cpp .o
+.SUFFIXES: .c .m .cc .cxx .cpp .C .o
 
 .cc.o:
 	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
@@ -142,6 +140,9 @@ site-install-rb: install-rb
 	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
 
 .cpp.o:
+	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
+
+.C.o:
 	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c $<
 
 .c.o:

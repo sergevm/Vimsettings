@@ -1,9 +1,0 @@
-" Font
-set guifont=Consolas:h11.00
-
-" No audible bell
-set vb
-
-" No toolbar
-set guioptions-=T
-
