@@ -36,7 +36,7 @@ set statusline+=%h      "help file flag
 set statusline+=%y      "filetype
 set statusline+=%r      "read only flag
 set statusline+=%m      "modified flag
-
+set statusline+=%{fugitive#statusline()}
 "display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%#error#
 set statusline+=%{StatuslineTabWarning()}
@@ -61,6 +61,7 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set laststatus=2
+
 
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
