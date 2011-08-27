@@ -7,7 +7,7 @@ set history=200
 let mapleader = ","
 
 map <F2> :NERDTreeToggle<CR>
-map <leader>t :CommandT<CR>
+map <leader>f :CommandT<CR>
 map <leader>n :NERDTree<CR>
 "Buffer navigation
 map <C-TAB> :bnext!<CR>
@@ -180,4 +180,3 @@ filetype plugin on
 
 colorscheme obsidian 
 
-cd /Users/serge/Development
