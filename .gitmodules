@@ -19,3 +19,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/sergevm/syntastic.git
+[submodule "bundle/jslint"]
+	path = bundle/jslint
+	url = git://github.com/sergevm/jslint.vim.git
