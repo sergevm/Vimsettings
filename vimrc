@@ -178,5 +178,5 @@ filetype on
 filetype indent on
 filetype plugin on
 
-colorscheme obsidian 
+colorscheme obsidian2
 

@@ -1,2 +1,6 @@
 *.o
 *.swp
+/doc/**
+.VimballRecord
+/ruby/command-t/**
+
