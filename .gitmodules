@@ -22,3 +22,6 @@
 [submodule "bundle/jslint"]
 	path = bundle/jslint
 	url = git://github.com/sergevm/jslint.vim.git
+[submodule "bundle/vim-rubytest"]
+	path = bundle/vim-rubytest
+	url = https://github.com/janx/vim-rubytest.git
