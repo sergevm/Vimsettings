@@ -173,6 +173,8 @@ endfunction
 
 set backspace=indent,eol,start
 
+execute pathogen#infect()
+
 "use node.js for javascript interpretation
 let $JS_CMD='node'
 syntax on
