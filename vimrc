@@ -182,3 +182,4 @@ filetype plugin on
 
 colorscheme obsidian2
 
+

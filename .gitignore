@@ -4,3 +4,6 @@
 .VimballRecord
 /ruby/command-t/**
 .DS_Store
+/doc/tags
+/bundle/**
+/**/tags
