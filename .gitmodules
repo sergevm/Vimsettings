@@ -29,3 +29,9 @@
 	path = bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 
+[submodule "bundlezencoding-vim"]
+	path = bundlezencoding-vim
+	url = http://github.com/mattn/zencoding-vim.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim.git
