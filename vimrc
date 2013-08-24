@@ -1,7 +1,8 @@
 set nocompatible
-
-call pathogen#runtime_append_all_bundles()
+set nocp
+call pathogen#incubate()
 call pathogen#helptags()
+call pathogen#infect()
 
 set history=200
 let mapleader = ","
@@ -173,15 +174,12 @@ endfunction
 
 set backspace=indent,eol,start
 
-execute pathogen#infect()
+colorscheme vividchalk
 
-"use node.js for javascript interpretation
-let $JS_CMD='node'
 syntax on
 filetype on
 filetype indent on
 filetype plugin on
 
-colorscheme obsidian2
 
 
