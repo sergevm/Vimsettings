@@ -2,7 +2,7 @@ set nocompatible
 set nocp
 call pathogen#incubate()
 call pathogen#helptags()
-call pathogen#infect()
+execute pathogen#infect()
 
 set history=200
 let mapleader = ","
