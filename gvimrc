@@ -12,4 +12,4 @@ set guioptions-=T                 " No toolbar
 " Background of autocomplete menu
 highlight PMenu gui=bold guibg=#CECECE guifg=#444444
 
-colorscheme obsidian2
+colorscheme ir_black

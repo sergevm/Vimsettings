@@ -5,3 +5,6 @@
 /ruby/command-t/**
 .DS_Store
 /bundle/**
+/doc/tags
+/**/tags
+.netrwhist
