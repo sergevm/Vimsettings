@@ -4,3 +4,4 @@
 .VimballRecord
 /ruby/command-t/**
 .DS_Store
+/bundle/**

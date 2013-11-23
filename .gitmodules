@@ -25,3 +25,6 @@
 [submodule "bundle/vim-rubytest"]
 	path = bundle/vim-rubytest
 	url = https://github.com/janx/vim-rubytest.git
+[submodule "bundle/node"]
+	path = bundle/node
+	url = https://github.com/moll/vim-node.git
