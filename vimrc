@@ -174,7 +174,9 @@ endfunction
 
 set backspace=indent,eol,start
 
-colorscheme vividchalk
+:set t_Co=256
+:set background=dark
+:color grb256
 
 syntax on
 filetype on
