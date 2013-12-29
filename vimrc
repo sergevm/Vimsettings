@@ -10,6 +10,7 @@ let mapleader = ","
 map <F2> :NERDTreeToggle<CR>
 map <leader>f :CommandT<CR>
 map <leader>n :NERDTree<CR>
+
 "Buffer navigation
 map <C-TAB> :bnext!<CR>
 map <C-S-TAB> :bprev!<CR>
@@ -174,7 +175,10 @@ endfunction
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set backspace=indent,eol,start
 
-":set t_Co=256
+"Have syntastic ignore angular attributes in html files
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+:set t_Co=256
 :set background=dark
 :color focuspoint
 
