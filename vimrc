@@ -174,9 +174,9 @@ endfunction
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set backspace=indent,eol,start
 
-:set t_Co=256
+":set t_Co=256
 :set background=dark
-:color grb256
+:color focuspoint
 
 syntax on
 filetype on
