@@ -46,3 +46,9 @@
 [submodule "bundle/jshint"]
 	path = bundle/jshint
 	url = https://github.com/walm/jshint.vim
+[submodule "bundle/Omnisharp"]
+	path = bundle/Omnisharp
+	url = https://github.com/nosami/Omnisharp.git
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
