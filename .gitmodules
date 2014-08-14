@@ -7,9 +7,6 @@
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "bundle/vim-rspec"]
-	path = bundle/vim-rspec
-	url = git://github.com/taq/vim-rspec.git
 [submodule "bundle/vim-runtest"]
 	path = bundle/vim-runtest
 	url = git://github.com/bronson/vim-runtest.git
