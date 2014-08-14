@@ -248,7 +248,8 @@ let g:syntastic_cs_checkers = ['syntax', 'issues']
 autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
 " show type information automatically when the cursor stops moving
-autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+" SERGEVM - WHEN I ENABLE THIS, IT SEAMS TO BREAK SYNTASTIC
+" autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 " this setting controls how long to pause (in ms) before fetching type /
 " symbol information.
 set updatetime=500
